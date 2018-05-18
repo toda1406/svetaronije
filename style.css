@@ -1,0 +1,220 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24.03.2018., 16.29.24
+    Author     : toda
+*/
+html{
+    background-image: URL(images/slika20.jpg);/*pozadinsk slika*/
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Archivo Narrow',Arial,sans-serif;
+    font-size:16px;
+}
+h1,h2,h3,h4{
+    font-weight: normal;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+}
+h1{font-size: 34px;}
+h2{font-size: 26px;}
+h3{font-size: 24px;}
+h4{font-size: 22px;}
+
+#wrapper{
+    width: 960px;
+    margin: 30px auto;
+    padding: 15px;
+    background-color:rgba(153, 204, 255,0.7);
+  
+}
+#header{
+    background-color:rgba(153, 204, 255,0.7);
+    overflow: hidden;
+    margin-bottom: 10px; 
+    padding:10px;  
+}
+#header h1{
+    float:left;
+    font-size: 3em;
+    margin-left:200px;
+}
+#nav{
+    height: 50px;
+    background-color:#6666ff;
+}
+#nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#nav ul li{
+    float:left;
+    font-size: 20px;
+    position: relative;
+   
+    border-radius: 5px;
+}
+#nav ul li:hover > ul{/*ovde posle hovera znak >(kombinator css selektora) sakriva treci nivo padajuce liste*/
+                      /*gadja samo prve potomke ,samo element koji je direktno unutar*/
+    display: block;/*otvoren padajuci meni*/
+}
+#nav ul li ul{/*lista drugog nivoa*/
+    background-color:rgba(153, 204, 255,0.7);
+    position: absolute;/*roditelj mu je relative(nav ul li)*/
+    display:none;/*sakriveno u startu*/
+    width: 150px;
+    top:50px;
+    left:0;  
+}
+#nav ul li ul li{
+     float:none;/*skidamo float sa elemenata/li/ padajuce liste*/
+     border:1px solid #fff;
+     border-radius:5px;
+}
+#nav ul li ul li ul{/*treći nivo navigacije/padajuce liste*/
+    top:0;
+    left: 150px;
+}
+#nav ul li a{
+    padding: 10px;/*pločica u navigaciji celom širinom*/
+    display: block;/*pločica u navigaciji dolazi na svoje mesto,/a/ element smo iz inline pretvorili o block*/
+    height: 30px;
+    color: #000000;
+}
+#footer a:link,
+        a:visited{
+    text-decoration:none;
+}
+#footer a:hover{
+     background-color:rgba(190,122,207,0.6);
+    color:#FFF;   
+}
+
+#nav ul li a:link,
+#nav ul li a:visited{
+    text-decoration: none;
+}
+#nav ul li a:hover{
+    background-color:rgba(190,122,207,0.6);
+    color:#FFF;   
+}
+#nav ul li a:active{
+    background-color: #999999;
+    color:#000000;
+}
+#logo{
+    float:right;
+}
+
+#slogan{
+    float:right;
+    font-size: 20px;
+    font-style: italic;
+}
+#social{/*div za ikonice - font-awesome*/
+    float:right;
+    margin-right: 10px;
+    font-size:30px;
+    margin-top:5px;
+}
+#social a:link,
+#social a:visited{
+   color:rgba(153, 204, 255,0.7);
+}
+#social a:hover{
+    color:rgba(190,122,207,0.6);
+}
+#social a:active{
+    color:#999;
+}
+#main{
+    width: 700px;
+    float:left;
+    margin-right:20px; 
+}
+#sidebar{
+    width: 240px;
+    float:left;
+}
+.blok h2{
+    background-color: rgba(190,122,207,0.6);
+    padding: 5px;
+    border-radius: 10px;
+}
+#footer{
+    background-color:#6666ff;
+    clear: both;
+    text-align: center;
+    padding: 10px;
+}
+#footer p{
+    margin:0;
+}
+#prognoza{
+    float:right;   
+}
+#prognoza a{
+    padding: 5px; 
+}
+input[type="text"]{/*stilizacija svih tekstualnih input formi pomocu specifičnog selektora*/
+    width: 300px;
+    height: 35px;
+    border:1px solid #6666ff;
+}
+fieldset{
+    float:left;
+}
+#paragraf{
+    float:right;
+    width:350px;
+    border:1px solid #ffffff;
+    padding: 5px;
+    margin-top: 2px;
+   
+}
+#slika{
+    float:left;
+    margin-top: 15px;   
+}
+/*stranica proizvodi*/
+.proizvodi{
+    border:1px solid  rgba(190,122,207,0.6);
+    margin-bottom: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+.proizvodi img{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 2px;
+} 
+/*stranica sveža aronija*/
+.svezaaronija{
+    border:1px solid rgba(190,122,207,0.6);
+    margin-bottom:20px;
+    padding: 10px;
+    float: left;
+    width: 318px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+.svezaaronija:nth-of-type(2n){
+    margin-right: 0;
+}
+
+.svezaaronija img{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    
+}
